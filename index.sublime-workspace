@@ -1,0 +1,437 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"crea",
+				"createRowsandColumns"
+			],
+			[
+				"rand",
+				"randomColor"
+			],
+			[
+				"is",
+				"isLastFrame"
+			],
+			[
+				"che",
+				"checkSpare"
+			],
+			[
+				"te",
+				"tenthFrame"
+			],
+			[
+				"r",
+				"reversed"
+			],
+			[
+				"pa",
+				"palindrome_chain_length"
+			],
+			[
+				"rever",
+				"reversed"
+			],
+			[
+				"rev",
+				"reverse"
+			],
+			[
+				"one",
+				"onesOrdinal"
+			],
+			[
+				"last",
+				"lastChar"
+			],
+			[
+				"ord",
+				"ordinalsStr"
+			],
+			[
+				"firs",
+				"firstTime"
+			],
+			[
+				"i",
+				"iterable"
+			],
+			[
+				"in",
+				"inArray"
+			],
+			[
+				"dev",
+				"devBaseUrl"
+			],
+			[
+				"inde",
+				"indexOf"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 135.0,
+		"last_filter": "comment",
+		"selected_items":
+		[
+			[
+				"comment",
+				"Toggle Block Comment"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"forma",
+				"JSCS Formatter: Format this file"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"sidebar",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 475.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/vjefri/Downloads/¡Come Bien! - Eat Right!.html",
+		"/Users/vjefri/Desktop/snake-clone/js/game.js",
+		"/Users/vjefri/Projects/snake/index.html",
+		"/Users/vjefri/Projects/snake/css/main.css",
+		"/Users/vjefri/Projects/snake/js/game.js",
+		"/Users/vjefri/Arcoiris/joseluisorozco/NEW-musical.css",
+		"/Users/vjefri/Arcoiris/joseluisorozco/comebien.html",
+		"/Users/vjefri/Arcoiris/joseluisorozco/landing/index.html",
+		"/Users/vjefri/Arcoiris/joseluisorozco/index.html",
+		"/Users/vjefri/Arcoiris/joseluisorozco/.git/COMMIT_EDITMSG",
+		"/Users/vjefri/Arcoiris/joseluisorozco/canto-y-cuento.html",
+		"/Users/vjefri/Arcoiris/joseluisorozco/animales-y-movimiento.html",
+		"/Users/vjefri/Desktop/algorithms/once.js",
+		"/Users/vjefri/Desktop/algorithms/binarySearch.js",
+		"/Users/vjefri/Desktop/algorithms/7kyuUniquePush.js",
+		"/Users/vjefri/Desktop/algorithms/7kyuNumberOfOccurrences.js",
+		"/Users/vjefri/Desktop/algorithms/7kyuReverseString.js",
+		"/Users/vjefri/Desktop/algorithms/7kyuSmallestValue.js",
+		"/Users/vjefri/Downloads/mailchimp/campaigns.csv",
+		"/Users/vjefri/Desktop/algorithms/RecursivePower.js",
+		"/Users/vjefri/Desktop/DOM-Tetris/tetris.js",
+		"/Users/vjefri/Desktop/tetris/index.js",
+		"/Users/vjefri/Desktop/coderbyte/medium/ArrayAddition.js",
+		"/Users/vjefri/Desktop/coderbyte/easy/ABCheck.js",
+		"/Users/vjefri/Desktop/algorithms/Splicing.js",
+		"/Users/vjefri/Desktop/assignment5/tetris.html",
+		"/Users/vjefri/Desktop/assignment5/tetris.js",
+		"/Users/vjefri/Desktop/assignment5/block.js",
+		"/Users/vjefri/Desktop/algorithms/5kyuAchainAddingFunction.js",
+		"/Users/vjefri/Projects/codewars/5kyu_chainadding.js",
+		"/Users/vjefri/Projects/colorfinder/js/main.js",
+		"/Users/vjefri/Projects/codewars/5kyu_doublecola.js",
+		"/Users/vjefri/Projects/exercises/balancedParens.js",
+		"/Users/vjefri/Projects/codewars/.git/COMMIT_EDITMSG",
+		"/Users/vjefri/Projects/codewars/6kyu/bowlingScore.js",
+		"/Users/vjefri/Projects/codewars/6kyu/palidromechainlength.js",
+		"/Users/vjefri/Projects/codewars/6kyu/smallestvalue.js",
+		"/Users/vjefri/Desktop/algorithms/RecursiveNestedCapitalization.js",
+		"/Users/vjefri/Desktop/algorithms/recursionWithTernary.js",
+		"/Users/vjefri/Desktop/algorithms/db-module-project-number-storage.js",
+		"/Users/vjefri/Desktop/algorithms/4kyuHumanReadableDurationFormat.js",
+		"/Users/vjefri/Desktop/algorithms/6kyuZeroFill.js",
+		"/Users/vjefri/Desktop/algorithms/7kyuFactorialDivision.js",
+		"/Users/vjefri/Desktop/algorithms/Pattern_LoopingAndTakingValuesOut.js",
+		"/Users/vjefri/Desktop/algorithms/Note_callApplyAndArguments.js",
+		"/Users/vjefri/Desktop/algorithms/EachMapReduce.js",
+		"/Users/vjefri/Desktop/algorithms/leapYear.js",
+		"/Users/vjefri/Desktop/algorithms/flattenAndAdd.js",
+		"/Users/vjefri/Documents/HackReactor/data-structues1/sprint-one/src/functional/queue.js",
+		"/Users/vjefri/Documents/HackReactor/data-structues1/sprint-one/src/functional/stack.js",
+		"/Users/vjefri/Documents/HackReactor/data-structues1/sprint-one/spec/specs.js",
+		"/Users/vjefri/Documents/HackReactor/hr18_shared_resources/review_materials/thisKeyword.js",
+		"/Users/vjefri/Documents/HackReactor/pinterestClone/styles.css",
+		"/Users/vjefri/Documents/HackReactor/more-dbs/mongo-example.js",
+		"/Users/vjefri/Documents/HackReactor/more-dbs/orm-example.js",
+		"/Users/vjefri/Documents/HackReactor/more-dbs/map-reduce.js",
+		"/Users/vjefri/Documents/HackReactor/2h-game/main.js",
+		"/Users/vjefri/Projects/vjefri.github.io/.git/COMMIT_EDITMSG",
+		"/Users/vjefri/Desktop/rule30.js",
+		"/Users/vjefri/Projects/createRepoGithubCLI.js",
+		"/Users/vjefri/Projects/personalpage/CNAME",
+		"/Users/vjefri/Downloads/blog/index.html",
+		"/Users/vjefri/Downloads/blog/css/main.css",
+		"/Users/vjefri/Downloads/DribbbleFolio_by_gsvineeth/index.html",
+		"/Users/vjefri/Projects/codewars/6kyu/routes.js",
+		"/Users/vjefri/Downloads/DribbbleFolio_by_gsvineeth/js/jribbble.js",
+		"/Users/vjefri/Projects/codewars/6kyu/sandbox.js",
+		"/Users/vjefri/Projects/codewars/6kyu/addingOrdinal.js",
+		"/Users/vjefri/Projects/codewars/6kyu/reverse.js",
+		"/Users/vjefri/Projects/codewars/6kyu/uniqueInOrder.js",
+		"/Users/vjefri/Projects/codewars/6kyu/validatecreditcardnumber.js",
+		"/Users/vjefri/.aliases",
+		"/Users/vjefri/Projects/personalpage/index.html",
+		"/Users/vjefri/Downloads/HalcyonDaysTemplate/index.html",
+		"/Users/vjefri/Projects/rewriting_underscore/.git/COMMIT_EDITMSG",
+		"/Users/vjefri/Desktop/algorithms/6kyuCompareVersions.js",
+		"/Users/vjefri/Desktop/algorithms/6kyuSquareNsum.js",
+		"/Users/vjefri/Projects/blog/config.js",
+		"/Users/vjefri/Projects/blog/config.",
+		"/Users/vjefri/Projects/staticblog/static/.git/COMMIT_EDITMSG",
+		"/Users/vjefri/Projects/staticblog/static/.git/MERGE_MSG",
+		"/Users/vjefri/Projects/blog/package.json",
+		"/Users/vjefri/Projects/ghost/package.json",
+		"/Users/vjefri/Projects/ghost/static/.git/COMMIT_EDITMSG",
+		"/Users/vjefri/Documents/HackReactorInterview/rewrite-underscore-library/src/underbar.js",
+		"/Users/vjefri/Documents/HackReactorInterview/practice.js",
+		"/Users/vjefri/Projects/rewriting_underscore/contains.js",
+		"/Users/vjefri/Downloads/Andres.html",
+		"/Users/vjefri/Projects/rewriting_underscore/pluck.js",
+		"/Users/vjefri/Desktop/underscore/underscore.js",
+		"/Users/vjefri/Projects/rewriting_underscore/every.js",
+		"/Users/vjefri/Projects/psadmin/src/index.html",
+		"/Users/vjefri/Projects/psadmin/src/components/homePage.js",
+		"/Users/vjefri/Projects/psadmin/src/main.js",
+		"/Users/vjefri/Projects/rewriting_underscore/reject.js",
+		"/Users/vjefri/Projects/rewriting_underscore/where.js",
+		"/Users/vjefri/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/vjefri/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/Users/vjefri/Projects/psadmin/eslint.config.json",
+		"/Users/vjefri/Projects/psadmin/gulpfile.js",
+		"/Users/vjefri/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/vjefri/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/vjefri/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/vjefri/Projects/psadmin/package.json",
+		"/Users/vjefri/Projects/psadmin/dist/index.html",
+		"/Users/vjefri/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/vjefri/Projects/psadmin/.jscsrc",
+		"/Users/vjefri/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/vjefri/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/Users/vjefri/Projects/psadmin/.git/COMMIT_EDITMSG",
+		"/Users/vjefri/Projects/codewars/6kyu/abbreviate.js",
+		"/Users/vjefri/Projects/rewriting_underscore/reduceRight.js",
+		"/Users/vjefri/Projects/codewars/6kyu/evilAutoCorrect.js",
+		"/Users/vjefri/Projects/rewriting_underscore/indexOf.js",
+		"/Users/vjefri/Projects/rewriting_underscore/.git/config",
+		"/Users/vjefri/Desktop/test2.js",
+		"/Users/vjefri/Arcoiris/carambakids/.htaccess",
+		"/Users/vjefri/Desktop/test.js"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"fanclub",
+			"jpg",
+			"background",
+			"unique",
+			"r",
+			"createRowsandColumns",
+			"init",
+			"createLevel",
+			"tenthFrame",
+			"checkFrame",
+			"checkSpare",
+			"arr",
+			"parseFloat",
+			"total",
+			"i",
+			"lastChar",
+			"last",
+			"teens",
+			"key",
+			";\n",
+			"char",
+			"result",
+			"sidebar",
+			"psadministration",
+			"bondfires",
+			"}\n",
+			"list[i]",
+			"i",
+			"atom",
+			"pieces"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 133.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
