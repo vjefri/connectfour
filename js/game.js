@@ -23,7 +23,7 @@ var connectFour = {
             var selectedColumn = $(this).attr("class").split(' ');
             console.log(selectedColumn[1]);
 
-            // when column clicked, change the color of the first cell that is white
+            // when column clicked, check to see if 
 
         });
     },
@@ -33,7 +33,6 @@ var connectFour = {
             // change background color
             var selectedColumn = $(this).attr("class").split(' ');
             selectedColumn = "." + selectedColumn[1];
-            console.log(selectedColumn);
             $(selectedColumn).css({'background-color':'#FFF4C1', 'opacity': '0.5'});
         }, function() {
             var selectedColumn = $(this).attr("class").split(' ');
