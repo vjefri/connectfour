@@ -105,4 +105,9 @@
     };
 
     connectFour.init();
+    // restart
+    $(".btn").on('click', function() {
+        $('.grid').empty();
+        connectFour.init();
+    });
 })();
