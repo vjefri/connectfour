@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-
     <title>Connect Four Game</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -14,18 +13,28 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2 col-sm-2"></div>
+            <div class="col-md-2 col-sm-2">
+                <div class="row options">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <button class="btn btn-default" type="button">Restart Game</button>
+                        <button class="btn btn-warning blindmode" type="button">Blind Mode</button>
+                        <button class="btn turn-btn" type="button">My Turn</button>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
             <!-- playing area -->
             <div class="col-md-8 col-sm-8 col-lg-8 grid"></div>
-
-            <div class="col-md-2 col-sm-2 clear">
-                <button class="btn btn-default" type="button">Restart Game</button>
-            </div>
+            <div class="col-md-2 col-sm-2"></div>
         </div>
     </div>
-    <script src="js/jquery-2.1.4.min.js"></script> 
+    <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/game.js"></script>
-    <script src="js/underscore.js"></script>
+    <script type="text/javascript" src="js/underscore.js"></script>
+
 </body>
+
 </html>

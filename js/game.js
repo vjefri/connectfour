@@ -28,7 +28,9 @@
 
         columnClicked: function(gridArr, currentPlayer) {
             // if player clicks on column, get the column id
+
             $(".cell").on('click', function() {
+                console.log(gridArr);
                 var column = $(this).attr("class").split('');
                 columnNumber = column[column.length - 1];
                 // get the number of the row with empty cell
@@ -36,7 +38,7 @@
                 var rowMatch;
                 connectFour.reverseEach(gridArr, function(row, i) {
                     if (row[columnNumber] === 0 && firstPass) {
-                        row[columnNumber] = 1;
+                        row[columnNumber] = currentPlayer;
                         firstPass = false;
                         rowMatch = i;
                     }
@@ -49,9 +51,16 @@
                     $(selectorColorChange).css({
                         'background-color': 'red',
                     });
+                    $('.turn-btn').css({
+                        'background-color': 'black',
+                    });
+
                 } else if (currentPlayer == 2) {
                     $(selectorColorChange).css({
                         'background-color': 'black',
+                    });
+                    $('.turn-btn').css({
+                        'background-color': 'red',
                     });
                 }
                 // switch player
@@ -59,7 +68,10 @@
             });
         },
 
-        highlightcolumn: function() {
+        blindMode: function() {
+            $('.turn-btn').css({
+                'background-color': 'red',
+            });
             $('.cell').hover(function() {
                 // change background color
                 var column = $(this).attr("class").split(' ');
@@ -87,6 +99,35 @@
             }
         },
 
+        // checkForWinner every time user makes a move
+        checkForWinner: function(gridArr) {
+            if (verticalCheck(gridArr)) return true;
+            if (horizontalCheck(gridArr)) return true;
+            if (leftUpDiagonalCheck(gridArr)) return true;
+            if (rightUpDiagonalCheck(gridArr)) return true;
+            return false;
+        },
+
+        verticalCheck: function() {
+            // extract column values [1, 1, 1, 1, 0, 2] // true
+        },
+
+        horizontalCheck: function() {
+
+        },
+
+        leftUpDiagonalCheck: function() {
+
+        },
+
+        rightUpDiagonalCheck: function() {
+
+        },
+
+        showWinner: function() {
+
+        },
+
         reverseEach: function(array, callback) {
             for (var i = array.length - 1; i >= 0; i--) {
                 callback(array[i], i);
@@ -100,7 +141,17 @@
             var gridArr = this.createGridArray(rows, columns);
             this.createGrid(rows, columns);
             this.columnClicked(gridArr, currentPlayer);
-            // this.highlightcolumn();
+            $('.turn-btn').css({
+                'background-color': 'red',
+            });
+
+            _.each([1,2,3], function(val) {
+                console.log("hello");
+            });
+
+            $(".blindMode").on('click', function() {
+                connectFour.blindMode()
+            });
         }
     };
 
