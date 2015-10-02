@@ -17,12 +17,15 @@
 
         createGridArray: function(rows, columns) {
             var grid = [];
-            for (var x = 0; x < rows; x++) {
-                grid[x] = [];
-                for (var y = 0; y < columns; y++) {
-                    grid[x][y] = 0;
-                }
-            }
+            var rows = _.range(0, rows);
+            var columns = _.range(0, columns);
+
+            _.each(rows, function(row) {
+                grid[row] = [];
+                _.each(columns, function(column) {
+                    grid[row][column] = 0;
+                });
+            });
             return grid;
         },
 
@@ -30,12 +33,14 @@
             // if player clicks on column, get the column id
 
             $(".cell").on('click', function() {
-                console.log(gridArr);
+                // TODO: check for winner, if true, announce winner 
                 var column = $(this).attr("class").split('');
-                columnNumber = column[column.length - 1];
+                columnNumber = Number(column[column.length - 1]);
                 // get the number of the row with empty cell
                 var firstPass = true;
                 var rowMatch;
+
+                // marks the position of turn in gridArr
                 connectFour.reverseEach(gridArr, function(row, i) {
                     if (row[columnNumber] === 0 && firstPass) {
                         row[columnNumber] = currentPlayer;
@@ -43,9 +48,10 @@
                         rowMatch = i;
                     }
                 });
+
+                console.log("Winner: " + connectFour.checkForWinner(gridArr, rowMatch, columnNumber, currentPlayer));
                 // make selector for clicked cell
                 var selectorColorChange = ".row" + rowMatch + " .column" + columnNumber;
-
                 // change color according to current player
                 if (currentPlayer == 1) {
                     $(selectorColorChange).css({
@@ -100,32 +106,111 @@
         },
 
         // checkForWinner every time user makes a move
-        checkForWinner: function(gridArr) {
-            if (verticalCheck(gridArr)) return true;
-            if (horizontalCheck(gridArr)) return true;
-            if (leftUpDiagonalCheck(gridArr)) return true;
-            if (rightUpDiagonalCheck(gridArr)) return true;
+        checkForWinner: function(gridArr, rowMatch, columnNumber, currentPlayer) {
+            if (this.verticalCheck(gridArr, rowMatch, columnNumber, currentPlayer)) return true;
+            if (this.horizontalCheck(gridArr, rowMatch, columnNumber, currentPlayer)) return true;
+            if (this.leftDownDiagonalCheck(gridArr, rowMatch, columnNumber, currentPlayer)) return true;
+            if (this.rightDownDiagonalCheck(gridArr, rowMatch, columnNumber, currentPlayer)) return true;
+            if (this.leftUpDiagonalCheck(gridArr, rowMatch, columnNumber, currentPlayer)) return true;
+            if (this.rightUpDiagonalCheck(gridArr, rowMatch, columnNumber, currentPlayer)) return true;
             return false;
         },
 
-        verticalCheck: function() {
-            // extract column values [1, 1, 1, 1, 0, 2] // true
-        },
-
-        horizontalCheck: function() {
-
-        },
-
-        leftUpDiagonalCheck: function() {
-
-        },
-
-        rightUpDiagonalCheck: function() {
+        verticalCheck: function(gridArr, rowMatch, columnNumber, currentPlayer) {
+            // if current player NOT in row 0 - 2, return false
+            // if current player, 3 rows below current column are the same value as current player return true, otherwise false
+            if (rowMatch > 2) return false;
+            for (var row = 0; row < 3; row++) {
+                if (currentPlayer == gridArr[row + 1][columnNumber] &&
+                    currentPlayer == gridArr[row + 2][columnNumber] &&
+                    currentPlayer == gridArr[row + 3][columnNumber]) return true;
+            }
+            return false;
 
         },
 
-        showWinner: function() {
+        horizontalCheck: function(gridArr, rowMatch, columnNumber, currentPlayer) {
 
+            // if columnNumber > 3, check left, else if columnNumber < 3, check right, else check both
+            // check right
+            console.log("Column: " + columnNumber);
+            console.log("Row: " + rowMatch);
+            console.log("Player: " + currentPlayer);
+            if (columnNumber < 3) {
+                for (var column = columnNumber; column < 7; column++) {
+                    if (currentPlayer == gridArr[rowMatch][column + 1] &&
+                        currentPlayer == gridArr[rowMatch][column + 2] &&
+                        currentPlayer == gridArr[rowMatch][column + 3]) return true;
+                }
+                return false;
+            }
+            // check left
+            else if (columnNumber > 3) {
+                for (var column = columnNumber; column > 0; column--) {
+                    if (currentPlayer == gridArr[rowMatch][column - 1] &&
+                        currentPlayer == gridArr[rowMatch][column - 2] &&
+                        currentPlayer == gridArr[rowMatch][column - 3]) return true;
+                }
+                return false;
+            }
+            // in the middle, check left and right
+            else {
+                for (var column = columnNumber; column < 7; column++) {
+                    if (currentPlayer == gridArr[rowMatch][column + 1] &&
+                        currentPlayer == gridArr[rowMatch][column + 2] &&
+                        currentPlayer == gridArr[rowMatch][column + 3]) return true;
+                }
+                for (var column = columnNumber; column > 0; column--) {
+                    if (currentPlayer == gridArr[rowMatch][column - 1] &&
+                        currentPlayer == gridArr[rowMatch][column - 2] &&
+                        currentPlayer == gridArr[rowMatch][column - 3]) return true;
+                }
+                return false;
+            }
+        },
+
+        // if they click in the upper right corner, check left down diagonal
+        leftDownDiagonalCheck: function(gridArr, rowMatch, columnNumber, currentPlayer) {
+            if (columnNumber > 2 && rowMatch < 3) {
+                if (currentPlayer == gridArr[rowMatch + 1][columnNumber - 1] &&
+                    currentPlayer == gridArr[rowMatch + 2][columnNumber - 2] &&
+                    currentPlayer == gridArr[rowMatch + 3][columnNumber - 3]) return true;
+            }
+            return false;
+        },
+
+        // if they click in the upper left corner, check right down diagonal
+        rightDownDiagonalCheck: function(gridArr, rowMatch, columnNumber, currentPlayer) {
+            if (columnNumber < 4 && rowMatch < 3) {
+                if (currentPlayer == gridArr[rowMatch + 1][columnNumber + 1] &&
+                    currentPlayer == gridArr[rowMatch + 2][columnNumber + 2] &&
+                    currentPlayer == gridArr[rowMatch + 3][columnNumber + 3]) return true;
+            }
+            return false;
+        },
+
+         // if they click in the lower left corner, check right up diagonal
+        rightUpDiagonalCheck: function(gridArr, rowMatch, columnNumber, currentPlayer) {
+            if (columnNumber < 4 && rowMatch > 2) {
+                if (currentPlayer == gridArr[rowMatch - 1][columnNumber + 1] &&
+                    currentPlayer == gridArr[rowMatch - 2][columnNumber + 2] &&
+                    currentPlayer == gridArr[rowMatch - 3][columnNumber + 3]) return true;
+            }
+            return false;
+        },
+
+         // if they click in the lower left corner, check left up diagonal
+        leftUpDiagonalCheck: function(gridArr, rowMatch, columnNumber, currentPlayer) {
+            if (columnNumber > 2 && rowMatch > 2) {
+                if (currentPlayer == gridArr[rowMatch - 1][columnNumber - 1] &&
+                    currentPlayer == gridArr[rowMatch - 2][columnNumber - 2] &&
+                    currentPlayer == gridArr[rowMatch - 3][columnNumber - 3]) return true;
+            }
+            return false;
+        },
+
+        showWinner: function(gridArr) {
+            
         },
 
         reverseEach: function(array, callback) {
@@ -143,10 +228,6 @@
             this.columnClicked(gridArr, currentPlayer);
             $('.turn-btn').css({
                 'background-color': 'red',
-            });
-
-            _.each([1,2,3], function(val) {
-                console.log("hello");
             });
 
             $(".blindMode").on('click', function() {
