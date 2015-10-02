@@ -49,7 +49,11 @@
                     }
                 });
 
-                console.log("Winner: " + connectFour.checkForWinner(gridArr, rowMatch, columnNumber, currentPlayer));
+                var weHaveWinner = connectFour.checkForWinner(gridArr, rowMatch, columnNumber, currentPlayer);
+
+                if (weHaveWinner) {
+                    connectFour.showWinner(currentPlayer);
+                }
                 // make selector for clicked cell
                 var selectorColorChange = ".row" + rowMatch + " .column" + columnNumber;
                 // change color according to current player
@@ -189,7 +193,7 @@
             return false;
         },
 
-         // if they click in the lower left corner, check right up diagonal
+        // if they click in the lower left corner, check right up diagonal
         rightUpDiagonalCheck: function(gridArr, rowMatch, columnNumber, currentPlayer) {
             if (columnNumber < 4 && rowMatch > 2) {
                 if (currentPlayer == gridArr[rowMatch - 1][columnNumber + 1] &&
@@ -199,7 +203,7 @@
             return false;
         },
 
-         // if they click in the lower left corner, check left up diagonal
+        // if they click in the lower left corner, check left up diagonal
         leftUpDiagonalCheck: function(gridArr, rowMatch, columnNumber, currentPlayer) {
             if (columnNumber > 2 && rowMatch > 2) {
                 if (currentPlayer == gridArr[rowMatch - 1][columnNumber - 1] &&
@@ -209,8 +213,12 @@
             return false;
         },
 
-        showWinner: function(gridArr) {
-            
+        showWinner: function(currentPlayer) {
+            $('.grid').empty();
+            var colorWinner;
+            currentPlayer === 1 ? colorWinner = "Red" : colorWinner = "Black";
+            $('.grid').addClass( "won" );
+            $('.grid').text("Winner is: " + colorWinner);
         },
 
         reverseEach: function(array, callback) {
@@ -239,6 +247,7 @@
     connectFour.init();
     // restart
     $(".btn").on('click', function() {
+        $('.grid').removeClass( "won" );
         $('.grid').empty();
         connectFour.init();
     });

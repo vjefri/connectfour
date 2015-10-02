@@ -40,6 +40,12 @@
     border-radius: 5%;
 }
 
+.won {
+    padding: 25%;
+    color: white;
+    font-size: 20px;
+}
+
 .container-fluid {
     background-image: linear-gradient(90deg, #52EDC7, #5AC8FB);
     height: 800px;
