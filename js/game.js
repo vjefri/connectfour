@@ -137,9 +137,6 @@
 
             // if columnNumber > 3, check left, else if columnNumber < 3, check right, else check both
             // check right
-            console.log("Column: " + columnNumber);
-            console.log("Row: " + rowMatch);
-            console.log("Player: " + currentPlayer);
             if (columnNumber < 3) {
                 for (var column = columnNumber; column < 7; column++) {
                     if (currentPlayer == gridArr[rowMatch][column + 1] &&
@@ -217,8 +214,8 @@
             $('.grid').empty();
             var colorWinner;
             currentPlayer === 1 ? colorWinner = "Red" : colorWinner = "Black";
-            $('.grid').addClass( "won" );
-            $('.grid').text("Winner is: " + colorWinner);
+            $('.grid').addClass("won");
+            $('.grid').text("Winner is " + colorWinner + "!");
         },
 
         reverseEach: function(array, callback) {
@@ -237,18 +234,26 @@
             $('.turn-btn').css({
                 'background-color': 'red',
             });
-
-            $(".blindMode").on('click', function() {
-                connectFour.blindMode()
-            });
         }
     };
 
     connectFour.init();
     // restart
     $(".btn").on('click', function() {
-        $('.grid').removeClass( "won" );
+        $('.grid').removeClass("won");
         $('.grid').empty();
         connectFour.init();
+        $('.blindMode').css({
+            'background-color': '#2ECD71',
+        });
+    });
+
+    // start blindMode
+    $(".blindMode").on('click', function() {
+        console.log("working");
+        connectFour.blindMode();
+        $('.blindMode').css({
+            'background-color': 'orange',
+        });
     });
 })();
