@@ -250,7 +250,6 @@
 
     // start blindMode
     $(".blindMode").on('click', function() {
-        console.log("working");
         connectFour.blindMode();
         $('.blindMode').css({
             'background-color': 'orange',
