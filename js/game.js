@@ -15,6 +15,7 @@
             }
         },
 
+        // create grid array that tracks player moves
         createGridArray: function(rows, columns) {
             var grid = [];
             var rows = _.range(0, rows);
@@ -31,9 +32,7 @@
 
         columnClicked: function(gridArr, currentPlayer) {
             // if player clicks on column, get the column id
-
             $(".cell").on('click', function() {
-                // TODO: check for winner, if true, announce winner 
                 var column = $(this).attr("class").split('');
                 columnNumber = Number(column[column.length - 1]);
                 // get the number of the row with empty cell
